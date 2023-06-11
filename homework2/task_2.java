@@ -1,24 +1,19 @@
 package homework2;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+/*
+2. Если необходимо, исправьте данный код
+(задание 2 https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit)
+ */
 
 public class task_2 {
     public static void main(String[] args) {
-        boolean work = true;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        while(work){
-            System.out.print("Введите дробное число: ");
-            try{
-                float fNumber = Float.parseFloat(reader.readLine());
-                System.out.printf("Введенное число равно %f\n", fNumber);
-                work = false;
-            } catch (IOException|NumberFormatException e) {
-                System.out.println("Неверный ввод. Введите дробное число!!!");
-            }
-
+        int[] intArray = {5, 2, 10, 4, 1, 6, 9, 8, 7};
+        int d = 0;
+        try {
+            double catchedRes1 = intArray[8] / d;
+            System.out.println("catchedRes1 = " + catchedRes1);
+        } catch (ArithmeticException e) {
+            System.out.println("Catching exception: " + e);
         }
     }
 }
+
